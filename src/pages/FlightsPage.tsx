@@ -4,7 +4,6 @@ import { fetchFlights } from "../redux/Slices/FlightsSlice";
 import type { AppDispatch, RootState } from "../redux/store";
 import FlightCard from "../components/FlightCard";
 import { Box, CircularProgress, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
-import Grid from '@mui/material/Grid';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import { Link } from "react-router-dom";
 
@@ -89,13 +88,13 @@ const FlightsPage = () => {
       <Box sx={{ p: 4, width: '100%' }}>
         <Box sx={{ minHeight: '100vh', minWidth: '100%' }}>
           {filteredFlights.length > 0 ? (
-            <Grid container spacing={3} justifyContent="center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
               {filteredFlights.map((flight) => (
-                <Grid item xs={12} sm={6} md={4} lg={3} key={flight.id}>
+                <div key={flight.id}>
                   <FlightCard flight={flight} loading={loading} />
-                </Grid>
+                </div>
               ))}
-            </Grid>
+            </div>
           ) : (
             <Box
               display="flex"
