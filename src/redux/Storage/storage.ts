@@ -1,5 +1,5 @@
 // utils/storage.ts
-import type { CartItem } from "./types"; // обновлённый тип
+import type { CartItem } from "../Types/types"; // обновлённый тип
 
 export const saveCartToLocalStorage = (cart: CartItem[]) => {
   try {

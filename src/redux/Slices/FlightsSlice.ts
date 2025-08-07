@@ -1,7 +1,7 @@
 // FlightsSlice.ts
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { Iflight } from "./types";
+import type { Iflight } from "../Types/types";
 import axios from "axios";
 
 interface State {
